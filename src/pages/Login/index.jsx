@@ -26,7 +26,7 @@ export function Login() {
 
       localStorage.setItem("loggedInUser", JSON.stringify(response.data));
 
-      navigate("/profile");
+      navigate("/main-feed");
     } catch (error) {
       console.log(error);
     }
@@ -34,14 +34,14 @@ export function Login() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>Email:</label>
+      <label>E-mail:</label>
       <input
         type="email"
         name="email"
         value={form.email}
         onChange={handleChange}
       />
-      <label>Senha:</label>
+      <label>Pasword:</label>
       <input
         type="password"
         name="password"
@@ -56,7 +56,7 @@ export function Login() {
       focus-visible:outline-2 focus-visible:outline-offset-2
       focus-visible:outline-indigo-600"
       >
-        Entrar!
+        Login
       </button>
     </form>
   );

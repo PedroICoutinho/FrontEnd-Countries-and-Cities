@@ -11,35 +11,19 @@ export function Signup() {
     confirmPassword: "",
   });
 
-  const [img, setImg] = useState("");
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function handleImage(e) {
-    setImg(e.target.files[0]);
-  }
-
-  async function handleUpload() {
-    try {
-      const uploadData = new FormData();
-      uploadData.append("picture", img);
-
-      const response = await api.post("/upload-image", uploadData);
-
-      return response.data.url;
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     try {
-      const imgURL = await handleUpload();
-      await api.post("/user/signup", { ...form, img: imgURL });
+      
+      await api.post("/user/signup", { ...form});
 
       navigate("/login");
     } catch (error) {
@@ -49,7 +33,7 @@ export function Signup() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="formName">Nome:</label>
+      <label htmlFor="formName">Name:</label>
       <input
         id="formName"
         name="name"
@@ -57,9 +41,7 @@ export function Signup() {
         value={form.name}
         onChange={handleChange}
       />
-      <label htmlFor="formImg">Sua foto de perfil:</label>
-      <input type="file" id="formImg" onChange={handleImage} />
-
+    
       <label htmlFor="formEmail">E-mail:</label>
       <input
         id="formEmail"
@@ -68,21 +50,23 @@ export function Signup() {
         value={form.email}
         onChange={handleChange}
       />
-      <label htmlFor="formPassword">Senha:</label>
+      <label htmlFor="formPassword">Password:</label>
       <input
         id="formPassword"
         name="password"
         type="password"
         value={form.password}
         onChange={handleChange}
+       // pattern="/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/gm"
       />
-      <label htmlFor="formConfirmPassword">Confirmação de senha</label>
+      <label htmlFor="formConfirmPassword">Verify Password</label>
       <input
         id="formConfirmPassword"
         type="password"
         name="confirmPassword"
         value={form.confirmPassword}
         onChange={handleChange}
+       // pattern="/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/gm"
       />
       <button
         type="submit"
@@ -91,7 +75,7 @@ export function Signup() {
       focus-visible:outline-2 focus-visible:outline-offset-2
       focus-visible:outline-indigo-600"
       >
-        Cadastrar
+        Send
       </button>
     </form>
   );

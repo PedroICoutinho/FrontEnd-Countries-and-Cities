@@ -4,7 +4,7 @@ import { AuthContextComponent } from "./contexts/authContext";
 import { Error } from "./pages/Error";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
-import { Profile } from "./pages/Profile";
+import { MainFeed } from "./pages/Main-Feed";
 import { Signup } from "./pages/Signup";
 
 function App() {
@@ -16,8 +16,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route
-            path="/profile"
-            element={<AuthRouteProtector component={Profile} />}
+            path="/main-feed"
+            element={<AuthRouteProtector component={MainFeed} />}
           />
 
           <Route path="*" element={<Error />} />
