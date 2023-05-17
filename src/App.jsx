@@ -6,6 +6,13 @@ import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { MainFeed } from "./pages/Main-Feed";
 import { Signup } from "./pages/Signup";
+import { CreateCountry } from "./pages/CreateCountry";
+import { CountryDetails } from "./pages/CountryDetails";
+import { CreateCity } from "./pages/CreateCity";
+
+
+
+
 
 function App() {
   return (
@@ -19,6 +26,19 @@ function App() {
             path="/main-feed"
             element={<AuthRouteProtector component={MainFeed} />}
           />
+          <Route
+            path="/create-post"
+            element={<AuthRouteProtector component={CreateCountry} />}
+          />
+          <Route
+            path="/countries-post/:_id"
+            element={<AuthRouteProtector component={CountryDetails} />}
+          />
+          <Route
+            path="/create-city/:countryId"
+            element={<AuthRouteProtector component={CreateCity} />}
+          />
+
 
           <Route path="*" element={<Error />} />
         </Routes>
