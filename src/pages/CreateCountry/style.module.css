@@ -1,0 +1,19 @@
+.boxInput{
+    border-radius: 20px;
+  }
+
+  .buttonSend{
+    background-color: rgba(241, 240, 240, 0.795);
+    color: black;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+   
+  }
+  .navBar{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(243, 237, 237, 0.329);
+    height: 50px;
+    align-items: center;
+}

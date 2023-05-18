@@ -12,11 +12,10 @@ import { CreateCity } from "./pages/CreateCity";
 
 
 
-
-
 function App() {
   return (
     <>
+     
       <AuthContextComponent>
         <Routes>
           <Route path="/" element={<Home />} />

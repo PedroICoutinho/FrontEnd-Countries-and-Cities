@@ -1,19 +1,18 @@
-import { HomeIcon } from "@heroicons/react/24/solid";
+import style from "./style.module.css"
 import { Link } from "react-router-dom";
-
+import rj from "../../imagens/rj.jpg"
 
 export function Home() {
-  return (
-    <div>
-      <HomeIcon className="h-6 w-6 text-blue-500" />
-      <h1 className="text-3xl font-bold underline">Countries-and-Cities</h1>
-      <Link to="/login">
-      <button>Login</button>
-      </Link>
+  return (<>
+    <img className={style.heroImage} src={rj}/>
+    <div className={style.boxText}>
+      <h1 className={style.boxTitle}>Countries-and-Cities</h1>
+      <div className={style.boxButtons}>
+      <Link to="/login"><button className={style.Buttons}>Login</button></Link>
       {" "}
-      <Link to="/signup"><button>Sign up</button></Link>
-
-
+      <Link to="/signup"><button className={style.Buttons}>Sign up</button></Link>
+      </div>
     </div>
+    </>
   );
 }

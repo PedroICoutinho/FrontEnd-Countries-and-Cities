@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../api/api";
 import { AuthContext } from "../../contexts/authContext";
+import style from "./style.module.css"
 
 export function Login() {
   const [form, setForm] = useState({
@@ -36,25 +37,24 @@ export function Login() {
     <form onSubmit={handleSubmit}>
       <label>E-mail:</label>
       <input
+        className={style.boxInput}
         type="email"
         name="email"
         value={form.email}
         onChange={handleChange}
       />
-      <label>Pasword:</label>
+      <label>Password:</label>
       <input
         type="password"
         name="password"
         value={form.password}
         onChange={handleChange}
+        className={style.boxInput}
       />
 
       <button
         type="submit"
-        className="rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold
-      text-white shadow-sm hover:bg-indigo-500 focus-visible:outline
-      focus-visible:outline-2 focus-visible:outline-offset-2
-      focus-visible:outline-indigo-600"
+        className={style.buttonSend}
       >
         Login
       </button>

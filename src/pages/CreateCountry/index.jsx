@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { api } from "../../api/api";
-import { useNavigate } from "react-router-dom";
-
+import { useNavigate, Link } from "react-router-dom";
+import style from "./style.module.css"
 
 export function CreateCountry(){
 const navigate = useNavigate()
@@ -51,11 +51,14 @@ function handleImage(e) {
     }
   }
 
-  return (
-
+  return (<>
+    <nav className={style.navBar}>
+      <Link to="/main-feed"><button>FEED</button></Link>
+    </nav>   
     <form onSubmit={handleSubmit}>
       <label>Country:</label>
       <input
+      className={style.boxInput}
         name="name"
         type="text"
         value={form.name}
@@ -66,6 +69,7 @@ function handleImage(e) {
 
       <label>Continent:</label>
       <input 
+        className={style.boxInput}
         name="continent"
         type="text"
         value={form.continent}
@@ -74,15 +78,12 @@ function handleImage(e) {
       
       <button
         type="submit"
-        className="rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold
-      text-white shadow-sm hover:bg-indigo-500 focus-visible:outline
-      focus-visible:outline-2 focus-visible:outline-offset-2
-      focus-visible:outline-indigo-600"
+        className={style.buttonSend}
       >
         Post
       </button>
     </form>
-
+    </>
 
   )
 

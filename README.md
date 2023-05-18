@@ -1,16 +1,5 @@
-# Template para aplicação React com autenticação + Tailwind
+# FrontEnd - Countries and Cities
 
-Tailwind já instalado e pronto para ser utilizado.
-Plugins: @tailwindcss/typography e @tailwindcss/forms
+## Sobre o repositório 
 
-Tailwind Docs
-
-- https://tailwindcss.com/docs
-
-Tailwind Components
-
-- https://tailwindui.com/
-
-Hero Icons
-Site - https://heroicons.com/
-Docs - https://github.com/tailwindlabs/heroicons
+É a construção do front-end do projeto, onde há o link entre 3 CRUD, após isso será disponibilizado o link do projeto aqui.

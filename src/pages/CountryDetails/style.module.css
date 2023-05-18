@@ -1,0 +1,43 @@
+.navBar{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(243, 237, 237, 0.329);
+  height: 50px;
+  align-items: center;
+}
+
+.countryBox{
+ width: 300px;
+ text-align: center;
+ position: relative;
+ top: 5%;
+ left: 40%;
+ background-color: rgba(255, 255, 255, 0.445);
+ padding: 20px;
+ border-radius: 10px; 
+ margin-top: 20px;
+}
+
+.buttonDelete{
+    background-color: rgba(241, 240, 240, 0.795);
+    color: black;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    
+  }
+
+.cityBox{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px; 
+    width: 300px;
+    margin-top: 30px ;
+    margin-left: 30px;
+   
+}
