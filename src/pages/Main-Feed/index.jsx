@@ -38,8 +38,10 @@ export function MainFeed(){
     <Link to="/create-post"><button>CREATE COUNTRY</button></Link>
     <button onClick={handleLogout}>LOGOUT</button>
   </nav>
+  <div className={style.childDirections} >
       {country.map((currentElement)=>{
         return <>
+       
         <div className={style.countryBox}>
         <Link to={`/countries-post/${currentElement._id}`}><img src={currentElement.flag}/></Link>
         <h1><strong>{currentElement.name}</strong></h1>
@@ -47,7 +49,7 @@ export function MainFeed(){
         </div>
         </>
       })}
-   
+    </div>
 
   </>
   )

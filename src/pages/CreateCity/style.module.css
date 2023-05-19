@@ -2,8 +2,8 @@
     border-radius: 20px;
 }
 
-.buttonSend{
-    background-color: rgba(241, 240, 240, 0.795);
+.buttonTeste{
+    background-color: rgba(228, 220, 220, 0.925);
     color: black;
     border-radius: 30px;
     width: 100px;
@@ -11,7 +11,7 @@
 }
 
 .navBar{
-      display: flex;
+    display: flex;
     justify-content: space-around;
     background-color: rgba(243, 237, 237, 0.329);
     height: 50px;

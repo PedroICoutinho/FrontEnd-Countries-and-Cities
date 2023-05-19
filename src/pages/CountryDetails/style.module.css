@@ -29,7 +29,6 @@
 
 .cityBox{
     display: grid;
-    grid-template-rows: auto auto auto;
     justify-items: center;
     align-items: center;
     gap: 10px;
@@ -41,3 +40,7 @@
     margin-left: 30px;
    
 }
+.childDirections{
+  display: flex;
+
+  }

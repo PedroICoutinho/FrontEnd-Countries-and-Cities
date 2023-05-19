@@ -81,7 +81,7 @@ function handleImage(e) {
       
       <button
         type="submit"
-        className={style.buttonSend}
+        className={style.buttonTeste}
       >
         Post
       </button>

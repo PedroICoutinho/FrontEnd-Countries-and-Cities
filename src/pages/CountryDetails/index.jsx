@@ -54,7 +54,8 @@ export function CountryDetails(){
       <strong><h1>{country.name}</h1></strong>
       <p>{country.continent}</p>
     </div>
-    <body> 
+
+    <div className={style.childDirections}> 
     
     {country.cities.map((currentCity, currentIndex)=>{
       return <> <div className={style.cityBox}>
@@ -77,7 +78,7 @@ export function CountryDetails(){
       
       </>
     })}
-   </body>
+   </div>
 
   </>
   )
