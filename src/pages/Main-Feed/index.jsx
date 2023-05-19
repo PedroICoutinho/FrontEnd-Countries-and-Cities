@@ -35,7 +35,7 @@ export function MainFeed(){
   
   return (<>
   <nav className={style.navBar}> 
-    <Link to="/create-post"><button>CREATE POST</button></Link>
+    <Link to="/create-post"><button>CREATE COUNTRY</button></Link>
     <button onClick={handleLogout}>LOGOUT</button>
   </nav>
       {country.map((currentElement)=>{
